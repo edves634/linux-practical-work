@@ -16,18 +16,3 @@
 
 ---
 
-## Результаты выполнения:
-
-### Задание 1: Создание пользователя и добавление в группы
-
-![Скриншот выполнения задания 1](screenshot1.png)
-
-**Выполненные команды:**
-```bash
-sudo adduser linux_user
-sudo groupadd wheel
-sudo usermod -aG sudo linux_user
-sudo usermod -aG wheel linux_user
-echo '%wheel ALL=(ALL:ALL) ALL' | sudo tee -a /etc/sudoers
-su - linux_user
-sudo whoami
